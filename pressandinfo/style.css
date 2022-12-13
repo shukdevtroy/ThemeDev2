@@ -1,0 +1,321 @@
+/*
+Theme Name: Press & Info
+Theme URI: https://wordpress.org/themes/pressandinfo/
+Author: Shukdev Datta
+Author URI: https://acropolis2788.net/
+Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor. Organizations and businesses have the ability to create dynamic landing pages with endless layouts using the group and column blocks. The centered content column and fine-tuned typography also makes it perfect for traditional blogs. Complete editor styles give you a good idea of what your content will look like, even before you publish. You can give your site a personal touch by changing the background colors and the accent color in the Customizer. The colors of all elements on your site are automatically calculated based on the colors you pick, ensuring a high, accessible color contrast for your visitors.
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1.3
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: pressandinfo
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Poppins', sans-serif;
+	overflow-x: hidden;
+}
+/*global css variable*/
+:root{
+	--btnbgcolor: #000;
+	--fontfamily: 'Poppins', sans-serif;
+}
+
+header{
+	width: 100%;
+}
+.nav-link{
+	font-family: var(--fontfamily) !important;
+}
+
+.all-posts-banner{
+	width: 100%;
+}
+.banner-img{
+	height: 700px;
+	margin: 52px 0px;
+	overflow: hidden;
+}
+
+.navbar-nav li{
+	margin-left: 16px;
+}
+.navbar-nav li a{
+	color: black;
+}
+
+.card {
+	 height: auto;
+	 border-radius: 10px;
+	 z-index: 1;
+}
+.card .card-img {
+	 width: 100%;
+	 height: 250px;
+	 border-radius: 10px 10px 0px 0px;
+}
+.card .card-img img {
+	 width: 100%;
+	 height: 100%;
+	 border-radius: 10px 10px 0px 0px;
+}
+.card .card-content {
+	 border-radius: 0px 0px 10px 10px;
+	 background-color: #fff;
+	 display: flex;
+	 flex-direction: column;
+	 row-gap: 10px;
+	 padding: 25px 20px;
+}
+.card .card-content .card-tag li{
+	 background: #f97316;
+	 width: fit-content;
+	 padding: 5px 12px;
+	 font-size: 14px;
+	 border-radius: 15px;
+}
+.card .card-content .card-tag li{
+	list-style: none;
+	display: inline-block;
+	margin-right: 8px;
+}
+.card .card-content .card-tag li a{
+	color: white;
+}
+.card .card-content .card-title a{
+	 color: #383f51;
+	 font-size: 20px;
+	 line-height: 26px;
+	 font-weight: 600;
+}
+.card .card-content .card-title a:hover{
+	text-decoration: underline;
+}
+.card .card-content .card-desc {
+	 color: #383f51;
+	 line-height: 20px;
+	 font-weight: 500;
+}
+
+.bacon-blog-post {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.bacon-blog-post-inner { padding: 42px; 
+}
+.additional{
+	margin-bottom: 15px;
+}
+
+.bacon-blog-post .wp-post-image {
+  width: 100%;
+  height: auto;
+}
+
+.bacon-blog-post h1, .bacon-blog-post h2, .bacon-blog-post h3, .bacon-blog-post h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: Open Sans, sans-serif;
+}
+
+.bacon-blog-post h1 a, .bacon-blog-post h2 a, .bacon-blog-post h3 a, .bacon-blog-post h4 a {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+}
+
+.bacon-blog-post h1 {
+  margin-top: 0;
+  font-size: 3.157em;
+}
+
+.bacon-blog-post h2 { margin-top: 0; font-size: 2.369em;}
+.bacon-blog-post h3 {font-size: 1.777em;}
+.bacon-blog-post h4 {font-size: 1.333em;}
+.bacon-blog-post small, .bacon-blog-post .font_small {font-size: 0.75em;}
+
+.bacon-blog-post p, .bacon-blog-post p a {
+  font-family: Lora, Times New Roman, serif;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.bacon-blog-post p { margin-bottom: 1.3em; }
+.bacon-blog-post p:last-child { margin-bottom: 0; }
+.bacon-blog-post p a { color: #B21A13; }
+
+.bacon-blog-post blockquote {
+  margin: 1.3em;
+  padding-left: 1.3em;
+  border-left: rgb(224,40,43) solid 0.25em;
+  font-style: italic;
+}
+
+.bacon-shadow:after {
+  position: absolute;
+  content: "";
+  left: 20px;
+  right: 20px;
+  bottom: 0px;
+  z-index: -1;
+}
+
+.sidebar.widget {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-bottom: 42px;
+}
+.sidebar.widget ul {
+    margin: 0px;
+    padding: 0;
+    overflow: hidden;
+}
+.sidebar.widget ul li {
+    overflow: hidden;
+    font-size: 14px;
+    border-bottom: 1px dashed #ddd;
+    padding: 10px 0;
+}
+.sidebar-thumb{
+    float: left;
+    overflow: hidden;
+    margin-right: 15px;
+}
+.sidebar-thumb img{
+  background: #fff;
+  border: 1px dashed #e0e0e0;
+  padding: 6px;
+  height: 75px;
+  width: 75px;
+  
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+}
+.sidebar-content h5{ 
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 24px;
+}
+.sidebar-content h5 a:hover{ 
+  color: #2996bd;
+}
+
+.sidebar-content h5 a{ 
+    color: #202020;
+    outline: 0 none;
+    text-decoration: none;
+    font-weight: bold
+}
+.sidebar-meta{
+  margin-top: 10px;
+}
+.sidebar-meta span{
+  color: #2e2e2e;
+}
+.sidebar-meta span.time{
+  margin-right: 10px;
+}
+.sidebar-meta span i{
+  color: #2996bd
+}
+.cate span:last-child{
+	float: right;
+}
+.cate span:first-child{
+	font-weight: 600;
+}
+.all-cat li{
+	margin-bottom: 0 !important;
+}
+
+.single-post{
+	padding: 60px 0;
+}
+
+.post-author{
+	font-size: 16px !important;
+}
+.post-date{
+	float: right;
+	transform: translateY(0px);
+}
+.post-comment{
+	margin-left: 300px;
+	position: absolute;
+
+}
+.post-author{
+	font-size: 13px;
+	margin-left: 25px;
+}
+.tags {
+    display: inline-block;
+    margin: 0 -4px 0 0;
+    vertical-align: middle;
+    width: 50%;
+}
+.cs-tags {
+    display: block;
+    margin: 0 0 40px;
+}
+.cs-tags .tags span {
+    color: #333;
+    display: inline-block;
+    font-size: 18px;
+    margin: 0 10px 5px 0;
+}
+.cs-tags .tags ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.cs-tags ul li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: 0 0 6px;
+}
+.cs-tags ul li a {
+    display: block;
+    font-size: 12px;
+    margin: 0 8px 0 0;
+}
+.cs-tags .tags a {
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    color: #777;
+    padding: 2px 18px 3px;
+}
+
+@media screen and (max-width: 768px) {
+	 body {
+		 height: 100%;
+	}
+	 body::before, body::after {
+		 content: unset;
+	}
+}
